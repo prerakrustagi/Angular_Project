@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="tutorialApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tutorial App</title>
+        <script src="lib/angular.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/tutorialController.js"></script>
+    </head>
+    <body>
+        <div ng-controller="TutorialCtrl">
+            <h1>{{tutorialObj.title}}</h1>
+            <h2>{{tutorialObj.subtitle}}</h2>
+
+            <p>First Name: {{tutorialObj.firstName}}</p>
+            <p>Binding: {{tutorialObj.bindOutput}}</p>
+
+            <label>First Name</label>
+            <input ng-model="tutorialObj.firstName">
+
+            <br>
+            <button ng-click="timesTwo()">Multiply</button>
+        </div>
+    </body>
+</html>
